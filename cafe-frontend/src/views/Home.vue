@@ -1,15 +1,12 @@
 <template>
   <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1>Cafés de Paris</h1>
+      <h1>Cafés</h1>
       <router-link to="/add" class="btn btn-success">Adicionar Cafe</router-link>
     </div>
 
-    <button class="btn btn-sm btn-info me-2 mb-2" @click="toggleOrdenacao">
-      {{ ordenado ? 'Ordenação original' : 'Ordenar por avaliação' }}
-    </button>
 
-    <Cafete v-for="cafe in cafes" :key="cafe.id" :cafe="cafe" @deleteCafe="deleteCafe" />
+    <CafeItem v-for="cafe in cafes" :key="cafe.id" :cafe="cafe" @deleteCafe="deleteCafe" />
   </div>
 </template>
 

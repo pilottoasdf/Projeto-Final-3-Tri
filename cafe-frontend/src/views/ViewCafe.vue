@@ -1,6 +1,6 @@
 <template>
     <div class="container mt-4">
-        <h2 class="mb-3">Cafeteria {{ cafe?.id }}</h2>
+        <h2 class="mb-3">Cafeteria {{ cafe?.nome }}</h2>
         <p><strong>Nome:</strong> {{ cafe?.nome }}</p>
         <p><strong>Inauguração:</strong> {{ cafe?.data_inauguracao.split('-').reverse().join('/') }}</p>
         <p><strong>Endereço:</strong> {{ cafe?.endereco }}</p>
